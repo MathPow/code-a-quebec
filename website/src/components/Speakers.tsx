@@ -60,7 +60,7 @@ export function Speakers() {
           >
             Présentations
           </h2>
-          <p className="font-display mt-4 text-2xl tracking-tight text-blue-900">
+          <p className="font-display mt-4 text-lg tracking-tight text-blue-900 sm:text-2xl">
             Découvrez les personnes qui ont fait des présentations au Code @ Québec.
           </p>
         </div>
@@ -124,7 +124,7 @@ export function Speakers() {
               >
                 {event.talks.map((talk, talkIndex) => (
                   <div className="flex not-md:flex-col not-md:items-center">
-                    <div className="mr-4 w-80 flex-none">
+                    <div className="w-full max-w-80 flex-none md:mr-4">
                       <div className="group relative h-70 transform overflow-hidden rounded-4xl">
                         <div
                           className={clsx(
@@ -178,7 +178,7 @@ export function Speakers() {
                         ) : undefined}
                       </p>
                     </div>
-                    <div className="flex flex-col gap-y-3 text-justify">
+                    <div className="flex flex-col gap-y-3">
                       <h3 className="font-display mt-4 flex gap-x-2 text-xl font-medium tracking-tight text-blue-900">
                         {talk.youtubeUrl ? (
                           <a href={talk.youtubeUrl} target="_blank" className="-mt-0.5">
@@ -204,7 +204,9 @@ export function Speakers() {
                         ) : undefined}
                         <span>{talk.title}</span>
                       </h3>
-                      <p className="text-base tracking-tight text-gray-600">{talk.summary}</p>
+                      <p className="text-justify text-base tracking-tight text-gray-600">
+                        {talk.summary}
+                      </p>
                       <div className="flex flex-col gap-2">
                         {talk.links.map((link) => (
                           <div>
