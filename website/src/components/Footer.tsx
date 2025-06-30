@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Container } from '@/components/Container'
-import { DiamondIcon } from '@/components/DiamondIcon'
-import { Logo } from '@/components/Logo'
+import Link from "next/link";
+import { Container } from "@/components/Container";
+import { DiamondIcon } from "@/components/DiamondIcon";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   return (
@@ -13,7 +13,7 @@ export function Footer() {
           <Link className="cursor-pointer" href="/">
             <Logo height={48} width={32} />
           </Link>
-          <div className="flex gap-3 text-gray-500 items-center">
+          <div className="flex items-center gap-3 text-gray-500">
             <Link href="/guidelines" className="hover:underline">
               Guidelines
             </Link>
@@ -24,13 +24,17 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-6 text-base text-gray-400 md:mt-0">
-          Organisé par{' '}
-          <Link href="https://michaelmasson.com" className="underline hover:underline-offset-1 underline-offset-2" target="_blank">
+          Organisé par{" "}
+          <Link
+            href="https://michaelmasson.com"
+            className="underline underline-offset-2 hover:underline-offset-1"
+            target="_blank"
+          >
             Michael Masson
-          </Link>{' '}
+          </Link>{" "}
           &copy; {new Date().getFullYear()}
         </p>
       </Container>
     </footer>
-  )
+  );
 }

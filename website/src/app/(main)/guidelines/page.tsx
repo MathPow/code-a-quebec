@@ -1,5 +1,5 @@
-import { BackgroundImage } from '@/components/BackgroundImage'
-import { Guidelines } from '@/components/Guidelines'
+import { BackgroundImage } from "@/components/BackgroundImage";
+import { Guidelines } from "@/components/Guidelines";
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <BackgroundImage className="-top-36 -bottom-14" />
       <Guidelines />
     </div>
-  )
+  );
 }
